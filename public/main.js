@@ -15,3 +15,28 @@ document.addEventListener('click', function (e) {
     Menu.classList.add('hidden');
   }
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const dateInputs = document.querySelectorAll('input[type="date"]');
+
+  dateInputs.forEach(input => {
+    const label = input.nextElementSibling;
+
+    // Check initial value and set label visibility
+    if (input.value === '') {
+      label.style.display = 'block';
+    } else {
+      label.style.display = 'none';
+    }
+
+    input.addEventListener('focus', function () {
+      label.style.display = 'none';
+    });
+
+    input.addEventListener('blur', function () {
+      if (this.value === '') {
+        label.style.display = 'block';
+      }
+    });
+  });
+});

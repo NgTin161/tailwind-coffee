@@ -21,3 +21,13 @@
 .ct-badge-circle {
   @apply text-xs text-center rounded-full px-1.5
 }
+
+.cs-subheadline {
+  @apply flex justify-center items-center mb-24
+}
+.cs-subheadline-deco-line {
+  @apply  w-8 h-px bg-gray-200 mx-2
+}
+.cs-subheadline-label {
+  @apply uppercase mx-4 tracking-widest text-gray-500 font-medium text-[13px] text-center
+}
